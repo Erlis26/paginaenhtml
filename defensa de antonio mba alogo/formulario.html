@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.complutense.com</title>
+    <link rel="stylesheet" href="consulta.css"> 
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=open+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+ body{
+    background-image: linear-gradient(35deg, white, blue, white, blue);
+    background-size: 500%;
+    animation: antonio 20s infinite;
+}
+/*condicion para animar background*/
+
+@keyframes antonio{
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+ background-position: 100% 50%;
+  }
+  100%{
+background-position: 0% 50%;
+  }  
+}
+
+/*que la pagina adapte al todos los dispositivos*/
+
+.contenedor{
+width: 100%;
+}    
+
+/*barra de menu*/
+
+nav{
+    max-width: auto;
+    margin: auto;
+    background-color: blue;
+    font-size: 90%;
+    margin-top: 3px;  
+}
+
+@media screen and (max-width: 500px) {
+    body{
+        font-size:10px
+    }    
+    }
+
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.menu-horizontal li>a{
+    display: block;
+    padding: 15px 5px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+/*obciones del menu*/
+
+.menu-horizontal li:hover{
+    background-color: red;
+    transition: all 700ms ease;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 0px white
+}
+
+
+
+.menu-vertical{
+ position: absolute;
+ display: none;
+ list-style: none;
+ width: auto;
+ background-color: rgba(0, 0, 0, .5); 
+ flex-direction: column;
+ top: auto;
+ text-align: center;
+ font-size: auto;
+ font-variant: normal;
+ top: 60px;
+}
+
+.menu-horizontal li:hover .menu-vertical{
+    display: block;   
+}
+
+.menu-vertical li:hover{
+    background-color: blue;
+}
+
+.menu-vertical li:hover a{
+    display: block;
+    color: white;
+    padding: 15px 15px 15px 20px;
+    text-decoration: none;   
+}
+
+/*Barra lateral para buscar*/
+
+aside{
+    float: right;
+    width: 20%;
+    min-height: auto;
+    margin-top: auto;
+}
+
+
+
+/*encabezado animado*/
+
+.container-portada{
+    width: 100;
+    height: 400;
+    position: relative;
+    background-image: url(complutense.jpg);
+    background-repeat: none;
+    background-size: 15%;
+    animation: movimiento 25s infinite linear alternate;
+}
+
+@keyframes movimiento{
+    from{
+        background-position: bottom left;
+    }to{
+        background-position: top right;
+    }
+}
+
+/*cubre la visibilidad de la imagen del menu*/
+
+.capa-gradient{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: -webkit-linear-gradient(left,black,#0672d0);
+    opacity: 0.2;
+}
+
+header{
+    width: 100%;
+    height: 60px;
+    background: blue;
+}
+
+.container-details{
+    width: 100%;
+    max-width: auto;
+    position: relative;
+    margin-left: 20px;
+}
+
+.details{
+    width: 100%;
+    max-width: auto;
+    position: relative;
+    top: 12px;
+    color: white;
+}
+.details h1{
+    font-size: auto;
+    font-weight: 100;
+}
+.details p{
+    margin-top: 10px;
+    font-size: auto;
+}
+.details button{
+    padding: 10px 20px;
+    font-size: auto;
+    background-color: azure;
+    border: 1px solid black;
+    color: black;
+    margin-top: auto;
+    transition: background 300ms;
+    margin-left: auto;
+}
+.details button:hover{
+background: white;
+color: blueviolet;
+}
+
+.container-header{
+    width: auto;
+    max-width: auto;
+    position: absolute;
+    margin: auto;
+}
+.logo-title{
+    display: flex;
+}
+.logo-title img{
+    width: 110px;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+.logo-title h4{
+    color: white;
+    font-weight: 100;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+/*primeras escrituras*/
+
+main{
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    background-color: aliceblue;
+    padding: 25px;
+    border-radius: 15px;
+    
+}
+article{
+    width: 100px;
+    max-width: 800px;
+    margin-top: 15px;
+}
+article h1{
+    font-size: auto;
+    font-weight: 200;
+}
+article hr{
+max-width: auto;
+height: 4px;
+border-style: none;
+background: -webkit-linear-gradient(left,black,#0672d0);
+margin-top: 10px;
+text-align: justify;
+}
+
+/*pie de pagina*/
+
+footer{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    clear: both;
+    background: radial-gradient(10deg, aqua, white, blue, white);
+    text-align: center;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: auto;
+}
+
+/*galeria de fotos*/
+
+div.galeria{
+  margin: 10px 10px;
+  box-shadow: 0 4px 8px 0 firebrick, 0 6px 20px 0 rgbea(0,0,0,0.5);
+  float: left;
+  width: 170px;
+  height: 220px;
+  background-color: #0672d0;
+  margin-left: 70px;
+}
+div.galeria:hover{
+    border: 0px solid lightcoral;
+    transform: rotate(-5deg);
+}
+div.pie{
+    text-align: center;
+    text-shadow: 2px 2px 5px purple;
+    padding: auto;
+}
+
+/*video en el fondo*/
+
+/*video{
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+
+    top: 50%;
+    left: 50%;
+}
+   
+/*hoja de formulario*/
+
+.container{
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+.form-box{
+    width: 370px;
+    height: 455px;
+    position: relative;
+    margin: 6% auto;
+    background: white;
+    padding: 5px;
+    border-radius: 10px;
+    /*para ocultar una parte del formulario*/
+    overflow: hidden;
+}
+.button-box{
+    width: 240px;
+    margin: 30px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #c0c0;
+    border-radius: 30px;
+}
+.toggle-btn{
+    padding: 10px 22px;
+    cursor: pointer;
+    background: transparent;
+    border: 0px;
+    outline: none;
+    position: relative;
+}
+#elegir{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 120px;
+    height: 100%;
+    background: linear-gradient(to right, aqua, blue);
+    border-radius: 30px;
+    transition: 0.8s;
+}
+
+/*botones del formulario*/
+
+.redes-sociales{
+    margin: 35px auto;
+    text-align: center;
+}
+.redes-sociales img{
+    width: 30px;
+    margin: 0 12px;
+    box-shadow: 0 0 20px 9px white;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.input-group{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: 0.8s;
+}
+.input-field{
+width: 100%;
+padding: 10px 0;
+margin: 5px 0;
+border-left: 0;
+border-top: 0;
+border-right: 0;
+border-bottom: 2px solid blue;
+outline: none;
+background: transparent;
+}
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, aqua, blue);
+    border: 0px;
+    outline: none;
+    border-radius: 30px;
+}
+.check-box{
+    margin: 30px 10px 30px 0;
+}
+span{
+    color: black;
+    font-size: 12px;
+    bottom: 64px;
+    position: absolute;
+}
+#login{
+    left: 50px;
+}
+#registrar{
+    left: 450px;
+}
+
+footer{
+    text-color: aqua
+}
+
+.san{
+    background-image: linear-gradient(35deg, white, orange, aqua, white);
+    background-size: 500%;
+    animation: antonio 30s infinite;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+/*condicion para animar background
+
+@keyframes antonio{
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+ background-position: 100% 50%;
+  }
+  100%{
+background-position: 0% 50%;
+  }  
+}*/
+
+.form-box{
+    width: 450px;
+    height: auto;
+    position: relative;
+    margin: 6% auto;
+    background: blue;
+    padding: 10px;
+    border-radius: 10px;
+    }
+
+    .actualidad{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        background: black;
+        color: white;  
+    }
+
+    .frames{
+        display: flex;
+        margin-top: 20px;
+        margin-block: 20px;
+        margin-left: 30%;
+        color: white;
+        flex-direction: column;
+    }
+    }
+    .consultas{
+        
+        margin-top: 20px;
+        margin-left: 70px;
+        color: #fff;
+    }
+    .footer{
+        margin-top: -20px;
+        position: relative;
+    }
+
+</style>
+<body>
+
+<div class="contenedor">
+
+
+    
+    <div class="container-portada">
+        <div class="capa-gradient"></div>
+        <div class="container-details">
+            <div class="details">
+            <h1>REALIZA TODAS TUS CONSULTAS</br>Y NOTIFICACIONES ADECUADAS</h1>
+
+                <a href="web.html"><button> p&aacutegina principal</button></a>
+            </div>
+        </div>
+    </div>
+
+
+    <nav>
+        <ul class="menu-horizontal">
+         <li><a href="web.html"><img src="cuatro.jpg" width="25px" alt=""></a></li>
+         
+         <li>
+             <a href="consulta.html">Consultas</a>
+             <ul class="menu-vertical">
+              <li><a href="consulta.html">notas</a></li>   
+              <li><a href="consulta.html">asistencia</a></li>
+              <li><a href="consulta.html">pagos</a></li>      
+             </ul>
+         </li>
+         <li><a href="actualidad.html">noticias</a></li>
+         <li><a href="actualidad.html">actualidad</a></li>
+        </ul> 
+      </nav> 
+     
+<main>
+        <h1>En Complutense BUSSINES</h1>
+        <hr>
+        <br>
+        <p>Ofrecemos la siguientes Especialidadres: </p>
+     <br>
+        <p>MEDICINA; ENFERMERIA; LABORATORIO; FARMACIA; TELECOMUNICACIONES;
+            ADMINISTRACION Y DIRECCION DE EMPRESAS; CONTABILIDAD Y AUDITORIA; BANCAS Y FINANZAS; MARQUETING, PUBLICIDAD Y DIRECCION COMERCIAL;
+            SECRETARIADO; AZAFATAS DE AVIACION; ECONOMIA Y ESTADISTICA; RELACIONES INTERNACIONALES Y DIPLOMACIA;
+            ADUANAS; COMERCIO INTERNACIONAL, TRANSPORTE Y LOGISTICA; PERIODISMO; RELACIONES INTERNACIONALES; AZAFATAS DE EVENTOS; HOSTELERIA, RESTAURACION Y TURISMO;
+            ADMINISTRACION Y FINANZAS; CURSOS DE OFIMATICA; CURSOS DE IDIOMA: ESPA&tildeOL, FRANCES, INGLES;
+            CURSOS PARA EMPRESAS E INSTITUCIONES; CURSOS DE EXPERTOS; CURSOS DE ESPECIALIZACION.
+        </p>
+
+                        </hr>
+</main>
+
+<div class="footer">
+<footer>
+    <div class="form-box">
+<p>Formulario de notificaciones</p><br>
+<form action="https://formsubmit.co/antoniomba01@gmail.com" method="post">
+Nombre: <br> <input type="tex" Name="nombre" size="20" Maxlength="100">
+<br><br>
+Estado civil:
+<input type="radio" Name="estado" Value="Soltero">Soltero
+<input type="radio" Name="estado" Value="Casado" checked>Casado
+<input type="radio" Name="estado" Value="Viudo">Viudo
+<br><br>
+Idiomas:
+<Input type="checkbox" Name="ingl&eacutes" value="ingles">ingles
+<Input type="checkbox" Name="frances" value="frances">frances
+<Input type="checkbox" Name="portugues" value="portugues" checked>portugu&eacutes
+<input type="checkbox" Name="espa&ntildeol" value="espanol">espa&ntildeol
+ <br><br>
+
+
+Provincia: <br>
+<select Name="provincia">
+<option value="Litoral">Litoral
+<option value="Centro Sur">Centro Sur
+<option value="Kie Ntem">Kie Ntem
+<option value="Wele Nsas">Wele Nsas
+<option value="Annobon">Annob&oacuten
+<option value="Bioko Norte">Bioko Norte
+<option value="Bioko Sur">Bioko Sur
+<option value="Djibloho">Djibloho
+</select>
+<br><br>
+Ciudad: <br>
+<select Name="Ciudad" size="1">
+<option value="BATA">Regi&oacuten Continental
+<option value="MALABO">Regi&oacuten Insular
+</select>
+<br><br>
+Especialidades: <br>
+<select Name="Especialidades" MULTIPLE>
+<option value="MEDICINA">MEDICINA
+<option value="TELECOMUNICACIONES">TELECOMUNICACIONES
+<option value="INFORMATICA Y REDES">INFORMATICA Y REDES
+<option value="ENFERMERIA">ENFERMER&IacuteA
+<option value="LABORATORIO">LABORATORIO
+<option value="FARMACIA">FARMACIA
+<option value="RECURSOS HUMANOS">RECURSOS HUMANOS
+<option value="ADMINISTRACION Y DIRECCION DE EMPRESAS">ADMINISTRACION Y DIRECCION DE EMPRESAS
+<option value="CONTABILIDAD Y AUDITORIA">CONTABILIDAD Y AUDITORIA
+<option value="BANCAS Y FINANZAS">BANCAS Y FINANZAS
+<option value="MARKETING, PUBLICIDAD Y DIRECCION COMERCIAL">MARKETING, PUBLICIDAD Y DIRECCION COMERCIAL
+<option value="SECRETARIADO">SECRETARIADO
+<option value="AZAFATAS DE AVIACION">AZAFATAS DE AVIACION
+<option value="AZAFATAS DE EVENTOS">AZAFATAS DE EVENTOS   
+<option value="ECONOMIA Y ESTADISTICA">ECONOMIA Y ESTADISTICA
+<option value="RELACIONES INTERNACIONALES Y DIPLOMACIA">RELACIONES INTERNACIONALES Y DIPLOMACIA
+<option value="ADUANAS">ADUANAS
+<option value="COMERCIO INTERNACIONAL, TRANSPORTE Y LOGISTICA">COMERCIO INTERNACIONAL, TRANSPORTE Y LOGISTICA
+<option value="PERIODISMO">PERIODISMO
+<option value="HOSTELERIA, RESTAURACION Y TURISMO">HOSTELERIA, RESTAURACION Y TURISMO
+<option value="ADMINISTRACION Y FINANZAS">ADMINISTRACION Y FINANZAS
+<option value="CURSO DE OFIMATICA">CURSO DE OFIMATICA
+<option value="CURSO DE INGLES">CURSO DE INGLES
+<option value="CURSO DE FRANCES">CURSO DE FRANCES
+<option value="CURSO DE ESPANOL">CURSO DE ESPA&NtildeOL
+<option value="CURSOS INTENCIVOS DE (3meses)">CURSOS INTENCIVOS DE (3meses)
+<option value="CURSO DE INGLES">CURSO DE INGLES
+<option value="CURSO DE EXPERTOS">CURSO DE EXPERTOS
+<option value="CURSOS PARA EMPRESAS E INSTITUCIONES">CURSOS PARA EMPRESAS E INSTITUCIONES
+<option value="CURSO DE ESPECIALIZACION">CURSO DE ESPECIALIZACION
+                
+</select>
+
+<br><br>
+
+Centro de Procedencia: <br>
+<TEXTAREA ROWS="2" name="nombre" Cols="25">Indica el Centro...</textarea>
+<br>
+Deja un comentario: <br>
+<TEXTAREA ROWS="5" name="nombre" Cols="20"></Textarea>
+    <br>
+    <input type="submit" name="nombre" value="Enviar formulario" />
+     </form>
+</div>
+</footer>
+</div>
+
+
+ </div> 
+ 
+ <main>
+    <h1>Requisitos para la matr&iacutecula</h1>
+    <hr>
+    <br>
+
+    <p>2 FOTOS TAMA&NtildeO CARNET. <br><br>
+        FOTOCOPIA DE IDENTIDAD, PASAPORTE, RESGUARDO, PARTIDA DE BAUTISMO O CARNET ESCOLAR. <br><br>
+     FOTOCOPIA DE HOJA ACADEMICA, BOLETIN ESCOLAR, O EN SU CASO LA MATRICULA DEL CENTRO. <br><br>
+     MATRICULA 25.000XAF <br>
+     MENSUALIDAD 25.000XAF
+    </p>
+
+                    </hr>
+</main>
+<footer> 
+    <div class="actualidad">
+      <p>Centro de estudio profesional reconocido por el Ministerio de Educaci&oacuten, seg&uacuten la Ley N-123/0034C8</p>
+      <p>La p&aacutegina web pertenece al centro Complutense</p>
+    </div>
+  </footer>
+
+</body>
+</html>
