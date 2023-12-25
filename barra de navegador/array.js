@@ -1,5 +1,5 @@
-var refrscos = ["fanta", "cocola", "zuma", "agua", ]
-var platos = ["banbucha", "envuelto", "espagueti", "arroz", "sopa de cacahuete"]
+Const refrscos = ["fanta", "cocola", "zuma", "agua", ]
+Const platos = ["banbucha", "envuelto", "espagueti", "arroz", "sopa de cacahuete"]
 
 
 areglos_inmutable()
